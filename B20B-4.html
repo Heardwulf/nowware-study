@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NowWare Pilot</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="nowware.css">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+        <script>
+            function SpeakS1() {
+                speechSynthesis.speak(new SpeechSynthesisUtterance("From this entrance, travel down the stairs, 2 floors to the basement."));
+
+                var speech = new SpeechSynthesisUtterance();
+                speech.text = "";
+                speech.volume = 1; // 0 to 1
+                speech.rate = 1; // 0.1 to 9
+                speech.pitch = 1; // 0 to 2, 1=normal
+                speech.lang = "en-US";
+                speechSynthesis.speak(speech);
+            }
+            function SpeakS2() {
+                speechSynthesis.speak(new SpeechSynthesisUtterance("Turn right and continue."));
+
+                var speech = new SpeechSynthesisUtterance();
+                speech.text = "";
+                speech.volume = 1; // 0 to 1
+                speech.rate = 1; // 0.1 to 9
+                speech.pitch = 1; // 0 to 2, 1=normal
+                speech.lang = "en-US";
+                speechSynthesis.speak(speech);
+            }
+            function SpeakS3() {
+                speechSynthesis.speak(new SpeechSynthesisUtterance("Turn left."));
+
+                var speech = new SpeechSynthesisUtterance();
+                speech.text = "";
+                speech.volume = 1; // 0 to 1
+                speech.rate = 1; // 0.1 to 9
+                speech.pitch = 1; // 0 to 2, 1=normal
+                speech.lang = "en-US";
+                speechSynthesis.speak(speech);
+            }
+            function SpeakS4() {
+                speechSynthesis.speak(new SpeechSynthesisUtterance("Room B20B will be in front of you."));
+
+                var speech = new SpeechSynthesisUtterance();
+                speech.text = "";
+                speech.volume = 1; // 0 to 1
+                speech.rate = 1; // 0.1 to 9
+                speech.pitch = 1; // 0 to 2, 1=normal
+                speech.lang = "en-US";
+                speechSynthesis.speak(speech);
+            }
+            function SpeakNext() {
+                speechSynthesis.speak(new SpeechSynthesisUtterance("You have arrived."));
+
+                var speech = new SpeechSynthesisUtterance();
+                speech.text = "";
+                speech.volume = 1; // 0 to 1
+                speech.rate = 1; // 0.1 to 9
+                speech.pitch = 1; // 0 to 2, 1=normal
+                speech.lang = "en-US";
+                speechSynthesis.speak(speech);
+            }
+            
+        </script>
+    </head>
+    
+    <body>
+        <div>
+            <div class="container">
+                
+                <!-- Heading and progress -->
+                <div class="row">
+                    <div class="col-sm-9 col-xs-12 center-block text-center">
+                        <h1>B20B MLH</h1>
+                        <p><progress max="5" value="4"></progress></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-9 col-xs-12">
+                        <br />
+                        
+                        <!-- Steps to the goal -->
+                        <ol>
+                            <li onclick="SpeakS1()">From this entrance, travel down the stairs, 2 floors to the basement.</li>
+                            <li onclick="SpeakS2()">Turn right and continue.</li>
+                            <li onclick="SpeakS3()">Turn left.</li>
+                            <li onclick="SpeakS4()" class="active">Room B20B will be in front of you.</li>
+                            <li class="hidden">You have arrived.</li>
+                        </ol>
+                    </div>
+                    
+                    <!-- Now Where button -->
+                    <div class="col-sm-9 col-xs-12 footerControls center-block text-center">
+                        <a href="B20B-5.html"><button class="nextStep" onclick="SpeakNext()">Now&nbsp;Where</button></a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </body>
+
+</html>
